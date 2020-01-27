@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POSTGRES_NET_Core_Example", "POSTGRES_NET_Core_Example.csproj", "{CEC8A5CE-5B5C-4339-B2B7-D03B15FF94E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEC8A5CE-5B5C-4339-B2B7-D03B15FF94E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEC8A5CE-5B5C-4339-B2B7-D03B15FF94E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEC8A5CE-5B5C-4339-B2B7-D03B15FF94E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEC8A5CE-5B5C-4339-B2B7-D03B15FF94E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9278A1D-F12D-4363-9AC5-62B9A6E58988}
+	EndGlobalSection
+EndGlobal
