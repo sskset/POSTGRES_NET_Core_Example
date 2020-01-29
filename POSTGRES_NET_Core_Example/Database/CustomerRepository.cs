@@ -29,7 +29,7 @@ namespace POSTGRES_NET_Core_Example.Database
 
         public async Task<Customer> CreateAsync(string firstName, string lastName)
         {
-            var sql = "INSERT INTO public.\"Customers\" (firstname, lastname) values (@firstName, @lastName) returning id;";
+            var sql = "INSERT INTO customer.Customers (firstname, lastname) values (@firstName, @lastName) returning id;";
 
             using(var conn = new Npgsql.NpgsqlConnection(ConnectionString))
             {
@@ -41,7 +41,7 @@ namespace POSTGRES_NET_Core_Example.Database
 
         public async Task<Customer> GetAsync(int id)
         {
-            var sql = "select * from public.\"Customers\" where id=@id";
+            var sql = "select * from customer.Customers where id=@id";
 
             using (var conn = new NpgsqlConnection(ConnectionString))
             {

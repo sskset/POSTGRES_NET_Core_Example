@@ -1,0 +1,27 @@
+version: "3.4"
+
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: test_user
+      POSTGRES_PASSWORD: test_user_pwd
+      POSTGRES_DB: test_db
+    ports:
+      - 5432:5432
+    volumes:
+      - ../db/schema.sql:/docker-entrypoint-initdb.d/1-schema.sql
+      - ../db/insert-customers.sql:/docker-entrypoint-initdb.d/2-insert-customers.sql
+
+  postgres_net_core_example:
+    image: ${DOCKER_REGISTRY-}postgresnetcoreexample
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: local
+    ports:
+      - 5005:80
+    depends_on:
+      - db
